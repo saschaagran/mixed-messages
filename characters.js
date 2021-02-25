@@ -130,3 +130,54 @@ const severian = {
     return this.allQuotes[index];
   },
 };
+
+const estraven = {
+  // Quotes from Therem Harth rem ir Estraven in The Left Hand of Darkness by Ursula K. Le Guin
+  _patriotism:
+    "How does one hate a country, or love one?... I know people, I know towns, farms, hills and rivers and rocks, I know how the sun at sunset in autumn falls on the side of a certain plowland in the hills; but what is the sense of giving a boundary to all that, of giving a name and ceasing to love where the name ceases to apply? What is the love of one's country; is it hate of one's uncountry? Then it's not a good thing.",
+  get patriotism() {
+    return this._patriotism;
+  },
+
+  _action:
+    "When action grows unprofitable, gather information; when information grows unprofitable, sleep.",
+  get action() {
+    return this._action;
+  },
+
+  _nationalism:
+    "No, I don't mean love, when I say patriotism. I mean fear. The fear of the other. And its expressions are political, not poetical: hate, rivalry, aggression.",
+  get nationalism() {
+    return this._nationalism;
+  },
+
+  _timing:
+    "I never had a gift but one, to know when the great wheel gives to a touch, to know and act.",
+  get timing() {
+    return this._timing;
+  },
+
+  _safety:
+    "What good seeking the safe course, on a journey such as this? There are senseless courses, which I shall not take; but there is no safe one.",
+  get safety() {
+    return this._safety;
+  },
+
+  // Create a collection of all of the character's quotes
+  _allQuotes: [
+    this.patriotism(),
+    this.nationalism(),
+    this.action(),
+    this.timing(),
+    this.safety(),
+  ],
+  get allQuotes() {
+    return this._allQuotes;
+  },
+
+  // Choose a random quote
+  random() {
+    const index = Math.floor(Math.random * this.allQuotes.length);
+    return this.allQuotes[index];
+  },
+};
