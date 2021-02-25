@@ -1,11 +1,5 @@
 // Collection of Characters
-const allCharacters = [
-    severian,
-    estraven,
-    essun,
-    aragorn
-]
-
+const allCharacters = [severian, estraven, essun, aragorn, mogget];
 
 // Individual Characters
 const severian = {
@@ -263,45 +257,103 @@ const essun = {
 };
 
 const aragorn = {
-    //Quotes from Aragorn son of Arathorn in The Lord of The Rings by J.R.R. Tolkien
-    _valor: 'A time may come soon, when none will return. Then there will be need of valour without renown, for none shall remember the deeds that are done in the last defence of your homes. Yet the deeds will not be less valiant because they are unpraised.',
-    get valor() {
-        return this._valor;
-    },
+  //Quotes from Aragorn son of Arathorn in The Lord of The Rings by J.R.R. Tolkien
+  _valor:
+    "A time may come soon, when none will return. Then there will be need of valour without renown, for none shall remember the deeds that are done in the last defence of your homes. Yet the deeds will not be less valiant because they are unpraised.",
+  get valor() {
+    return this._valor;
+  },
 
-    _hunted: 'A hunted man sometimes wearies of distrust and longs for friendship.',
-    get hunted() {
-        return this._hunted;
-    },
+  _hunted:
+    "A hunted man sometimes wearies of distrust and longs for friendship.",
+  get hunted() {
+    return this._hunted;
+  },
 
-    _haste: 'The hasty stroke goes oft astray.',
-    get haste() {
-        return this._haste;
-    },
+  _haste: "The hasty stroke goes oft astray.",
+  get haste() {
+    return this._haste;
+  },
 
-    _afterlife: 'In sorrow, we must go, but not in despair. Behold! we are not bound for ever to the circles of the world, and beyond them is more than memory.',
-    get afterlife() {
-        return this._afterlife;
-    },
+  _afterlife:
+    "In sorrow, we must go, but not in despair. Behold! we are not bound for ever to the circles of the world, and beyond them is more than memory.",
+  get afterlife() {
+    return this._afterlife;
+  },
 
-    _morals: 'Good and ill have not changed since yesteryear.',
-    get morals() {
-        return this._morals;
-    },
+  _morals: "Good and ill have not changed since yesteryear.",
+  get morals() {
+    return this._morals;
+  },
 
-    // Create a collection of all of the character's quotes
-    _allQuotes: [
-        this.valor,
-        this.hunted,
-        this.haste,
-        this.afterlife,
-        this.morals
-    ],
-    get allQuotes() {
-        return this._allQuotes;
-    },
+  // Create a collection of all of the character's quotes
+  _allQuotes: [
+    this.valor,
+    this.hunted,
+    this.haste,
+    this.afterlife,
+    this.morals,
+  ],
+  get allQuotes() {
+    return this._allQuotes;
+  },
 
-    // Choose a random quote
+  // Choose a random quote
+  random() {
+    const index = Math.floor(Math.random * this.allQuotes.length);
+    return this.allQuotes[index];
+  },
+};
+
+const mogget = {
+  // Quotes from Mogget in The Abhorsen Trilogy and Clariel by Garth Nix
+  _life:
+    "Fish and fowl, warm sun and shady tress, the field mice in the wheat, under the cool light of the moon.",
+  get life() {
+    return this._life;
+  },
+
+  _doing: "It's always better to be doing",
+  get doing() {
+    return this._doing;
+  },
+
+  _kissing: "You have to start kissing someone sometime, I suppose.",
+  get kissing() {
+    return this._kissing;
+  },
+
+  _wet:
+    "Wake me when whatever terrible thing is about to happen happens, or if it appears I might get wet.",
+  get wet() {
+    return this._wet;
+  },
+
+  _permission:
+    "I am a great believer that anything not expressly forbidden is explicitly allowed.",
+  get permission() {
+    return this._permission;
+  },
+
+  _time: "Time plays tricks between here and home",
+  get time() {
+    return this._time;
+  },
+
+  // Create a collection of all of the character's quotes
+  _allQuotes: [
+    this.life,
+    this.doing,
+    this.kissing,
+    this.wet,
+    this.permission,
+    this.time,
+  ],
+  get allQuotes() {
+    return this._allQuotes;
+  },
+
+  // Choose a random quote
   random() {
     const index = Math.floor(Math.random * this.allQuotes.length);
     return this.allQuotes[index];
