@@ -102,23 +102,23 @@ const severian = {
 
   // Create a collection of all of the character's quotes
   _allQuotes: [
-    this.answers(),
-    this.beginning(),
-    this.books(),
-    this.commerce(),
-    this.courage(),
-    this.fear(),
-    this.gifts(),
-    this.gratitude(),
-    this.lies(),
-    this.love(),
-    this.miracles(),
-    this.resolution(),
-    this.science(),
-    this.symbols(),
-    this.theology(),
-    this.time(),
-    this.war(),
+    this.answers,
+    this.beginning,
+    this.books,
+    this.commerce,
+    this.courage,
+    this.fear,
+    this.gifts,
+    this.gratitude,
+    this.lies,
+    this.love,
+    this.miracles,
+    this.resolution,
+    this.science,
+    this.symbols,
+    this.theology,
+    this.time,
+    this.war,
   ],
   get allQuotes() {
     return this._allQuotes;
@@ -165,11 +165,81 @@ const estraven = {
 
   // Create a collection of all of the character's quotes
   _allQuotes: [
-    this.patriotism(),
-    this.nationalism(),
-    this.action(),
-    this.timing(),
-    this.safety(),
+    this.patriotism,
+    this.nationalism,
+    this.action,
+    this.timing,
+    this.safety,
+  ],
+  get allQuotes() {
+    return this._allQuotes;
+  },
+
+  // Choose a random quote
+  random() {
+    const index = Math.floor(Math.random * this.allQuotes.length);
+    return this.allQuotes[index];
+  },
+};
+
+const essun = {
+  // Quotes from Essun / Damaya / Syenite from The Fifth Season by N.K. Jemisin
+  _home: "Home is what you take with you, not what you leave behind",
+  get home() {
+    return this._home;
+  },
+
+  _relationships:
+    "After all, a person is herself, and others. Relationships chisel the final shape of one's being. I am me, and you.",
+  get relationships() {
+    return this._relationships;
+  },
+
+  _smiling:
+    "There is an art to smiling in a way that others will believe. It is always important to include the eyes; otherwise, people will know you hate",
+  get smiling() {
+    return this._smiling;
+  },
+
+  _exploitation:
+    "For a society build on exploitation, there is no greater threat than having no one left to oppress.",
+  get exploitation() {
+    return this._exploitation;
+  },
+
+  _control:
+    "No need for guards when you can convince people to collaborate in their own internment.",
+  get control() {
+    return this._control;
+  },
+
+  _innocence:
+    "Say nothing to me of innocent bystanders, unearned suffering, heartless vengeance. When a comm builds atop a fault line, do you blame its walls when they inevitably crush the people inside? No; you blame whoever was stupid enough to think they could defy the laws of nature forever. Well, some worlds are built on a fault line of pain, held up by nightmares. Don’t lament when those worlds fall. Rage that they were built doomed in the first place.",
+  get innocence() {
+    return this._innocence;
+  },
+
+  _love: "When the world is hard, love must be harder still.",
+  get love() {
+    return this._love;
+  },
+
+  _endgame:
+    "Sometimes it is the how of a thing, not just the endgame, that matters most.",
+  get endgame() {
+    return this._endgame;
+  },
+
+  // Create a collection of all of the character's quotes
+  _allQuotes: [
+    this.home,
+    this.relationships,
+    this.smiling,
+    this.exploitation,
+    this.control,
+    this.innocence,
+    this.love,
+    this.endgame,
   ],
   get allQuotes() {
     return this._allQuotes;
