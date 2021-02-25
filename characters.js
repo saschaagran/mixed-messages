@@ -1,3 +1,12 @@
+// Collection of Characters
+const allCharacters = [
+    severian,
+    estraven,
+    essun
+]
+
+
+// Individual Characters
 const severian = {
   //Quotes from Severian in The Book of the New Sun by Gene Wolfe
   _time:
