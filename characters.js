@@ -2,7 +2,8 @@
 const allCharacters = [
     severian,
     estraven,
-    essun
+    essun,
+    aragorn
 ]
 
 
@@ -255,6 +256,52 @@ const essun = {
   },
 
   // Choose a random quote
+  random() {
+    const index = Math.floor(Math.random * this.allQuotes.length);
+    return this.allQuotes[index];
+  },
+};
+
+const aragorn = {
+    //Quotes from Aragorn son of Arathorn in The Lord of The Rings by J.R.R. Tolkien
+    _valor: 'A time may come soon, when none will return. Then there will be need of valour without renown, for none shall remember the deeds that are done in the last defence of your homes. Yet the deeds will not be less valiant because they are unpraised.',
+    get valor() {
+        return this._valor;
+    },
+
+    _hunted: 'A hunted man sometimes wearies of distrust and longs for friendship.',
+    get hunted() {
+        return this._hunted;
+    },
+
+    _haste: 'The hasty stroke goes oft astray.',
+    get haste() {
+        return this._haste;
+    },
+
+    _afterlife: 'In sorrow, we must go, but not in despair. Behold! we are not bound for ever to the circles of the world, and beyond them is more than memory.',
+    get afterlife() {
+        return this._afterlife;
+    },
+
+    _morals: 'Good and ill have not changed since yesteryear.',
+    get morals() {
+        return this._morals;
+    },
+
+    // Create a collection of all of the character's quotes
+    _allQuotes: [
+        this.valor,
+        this.hunted,
+        this.haste,
+        this.afterlife,
+        this.morals
+    ],
+    get allQuotes() {
+        return this._allQuotes;
+    },
+
+    // Choose a random quote
   random() {
     const index = Math.floor(Math.random * this.allQuotes.length);
     return this.allQuotes[index];
