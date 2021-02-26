@@ -2,7 +2,7 @@
 const severian = {
   _name: [
     "Severian",
-    "Autarch",
+    "The Autarch",
     "The Conciliator",
     "The Lictor of Thrax",
     "Apu-Punchau",

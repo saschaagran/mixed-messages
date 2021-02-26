@@ -6,19 +6,21 @@ function zip(list1, list2) {
   });
 }
 
-function selectCharacterQuotes(userInput) {
+export function selectCharacterQuotes(userInput) {
   let charactersSelected = [];
   let quotesSelected = [];
   // If any of the words in the user's input match a quote title by any character, select that quote
-  allCharacters.forEach(character => {
-    const allQuotes = Object.keys(character.quotes);
-    allQuotes.forEach(quote => {
-      if (userInput.toLowerCase().includes(quote)) {
-        charactersSelected.push(character.name);
-        quotesSelected.push(character.quotes[quote]);
-      }
-    })
-  })
+  if (userInput != undefined) {
+    allCharacters.forEach((character) => {
+      const allQuotes = Object.keys(character.quotes);
+      allQuotes.forEach((quote) => {
+        if (userInput.toLowerCase().includes(quote)) {
+          charactersSelected.push(character.name);
+          quotesSelected.push(character.quotes[quote]);
+        }
+      });
+    });
+  }
 
   //If there are fewer than 3 quotes selected, choose quotes randomly until three are selected
   while (quotesSelected.length < 3) {
@@ -37,5 +39,3 @@ function selectCharacterQuotes(userInput) {
   const charactersAndQuotes = zip(charactersSelected, quotesSelected);
   return charactersAndQuotes;
 }
-
-console.log(selectCharacterQuotes('time'));
