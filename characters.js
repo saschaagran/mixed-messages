@@ -169,7 +169,7 @@ const mogget = {
 };
 
 // Collection of Characters
-export const allCharacters = Array(severian, estraven, essun, aragorn, mogget);
+export const allCharacters = [severian, estraven, essun, aragorn, mogget];
 
 // Select a random quote by the character
 export function randomQuote(character) {
