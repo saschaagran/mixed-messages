@@ -10,7 +10,7 @@ export function selectCharacterQuotes(userInput) {
   let charactersSelected = [];
   let quotesSelected = [];
   // If any of the words in the user's input match a quote title by any character, select that quote
-  if (userInput != undefined) {
+  if (userInput !== undefined) {
     allCharacters.forEach((character) => {
       const allQuotes = Object.keys(character.quotes);
       allQuotes.forEach((quote) => {

@@ -13,10 +13,12 @@ function panelResponds(userInput = undefined) {
   console.log(
     `\nYou approach a panel of legendary figures, their forms obscured.`
   );
-  console.log(
-    `You speak nothing, yet three figures step forward from the mist.\n`
-  );
+
   const responses = selectCharacterQuotes(userInput);
+
+  console.log(
+    `You speak nothing, yet ${responses.length} figures step forward from the mist.\n`
+  );
   responses.forEach((response) => {
     const name = response[0];
     const quote = response[1];

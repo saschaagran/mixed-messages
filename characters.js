@@ -1,3 +1,9 @@
+// Add a randomization function
+export function random(max) {
+  return Math.floor(Math.random() * max);
+}
+
+
 //   Individual Characters
 const severian = {
   _name: [
@@ -8,7 +14,7 @@ const severian = {
     "Apu-Punchau",
   ],
   get name() {
-    const i = Math.floor(Math.random() * this._name.length);
+    const i = random(this._name.length);
     return this._name[i];
   },
 
@@ -91,7 +97,7 @@ const essun = {
   // Choose from the names this character uses throughout her life
   _name: ["Essun", "Damaya", "Syenite"],
   get name() {
-    const i = Math.floor(Math.random() * this._name.length);
+    const i = random(this._name.length);
     return this._name[i];
   },
   // Quotes from Essun / Damaya / Syenite from The Fifth Season by N.K. Jemisin
@@ -123,7 +129,7 @@ const essun = {
 const aragorn = {
   _name: ["Aragorn", "Strider", "Elessar", "Thorongil"],
   get name() {
-    const i = Math.floor(Math.random() * this._name.length);
+    const i = random(this._name.length);
     return this._name[i];
   },
   //Quotes from Aragorn son of Arathorn in The Lord of The Rings by J.R.R. Tolkien
@@ -146,7 +152,7 @@ const aragorn = {
 const mogget = {
   _name: ["Mogget", "Yrael", "The 8th Bright Shiner"],
   get name() {
-    const i = Math.floor(Math.random() * this._name.length);
+    const i = random(this._name.length);
     return this._name[i];
   },
   // Quotes from Mogget in The Abhorsen Trilogy and Clariel by Garth Nix
@@ -174,12 +180,12 @@ export const allCharacters = [severian, estraven, essun, aragorn, mogget];
 // Select a random quote by the character
 export function randomQuote(character) {
   const keys = Object.keys(character.quotes);
-  const i = Math.floor(Math.random() * keys.length);
+  const i = random(keys.length);
   const chosenQuote = keys[i];
   return character.quotes[chosenQuote];
 }
 
 export function randomCharacter() {
-  const i = Math.floor(Math.random() * allCharacters.length);
+  const i = random(allCharacters.length);
   return allCharacters[i];
 }
